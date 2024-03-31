@@ -3,9 +3,13 @@ package fromLection;
 import javax.swing.*;
 import java.awt.*;
 
-public class MainCanvas extends JPanel {
+public class MainCanvas extends JPanel implements  CanvasRepaintListener{
     MainCanvas() {
+
         setBackground(Color.BLUE);
+
+
+        controller = null;
     }
 
 //    @Override
@@ -17,14 +21,18 @@ public class MainCanvas extends JPanel {
     public int getRigth() {return getWidth() - 1;}
     public int getTop() {return 0;}
     public int getBottom() {return getHeight() - 1;}
+    private final CanvasRepaintListener controller;
     private long lastFrameTime;
 
-    private final MainWindow controller;
+//    private final MainWindow controller;
 
-    MainCanvas(MainWindow controller) {
+    MainCanvas(CanvasRepaintListener controller) {
         setBackground(Color.BLUE);
         this.controller = controller;
         lastFrameTime = System.nanoTime();
+
+
+
     }
 
     @Override
@@ -41,4 +49,8 @@ public class MainCanvas extends JPanel {
         repaint();
     }
 
+    @Override
+    public void onDrawFrame(MainCanvas canvas, Graphics g, float deltaTime) {
+        
+    }
 }

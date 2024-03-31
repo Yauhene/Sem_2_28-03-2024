@@ -1,7 +1,7 @@
 package fromLection;
 import java.awt.*;
 
-public abstract class Sprite {
+public abstract class Sprite implements Interactable{
     protected float x;
     protected float y;
     protected float halfWidth;
@@ -19,7 +19,7 @@ public abstract class Sprite {
     protected float getWidth() { return 2f * halfWidth; }
     protected float getHigth() { return  2f * halfHigth; }
 
-    void update(MainCanvas canvas, float deltaTime) { }
-    void render(MainCanvas canvas, Graphics g) { }
+//    void update(MainCanvas canvas, float deltaTime) { }
+//    void render(MainCanvas canvas, Graphics g) { }
 
 }
