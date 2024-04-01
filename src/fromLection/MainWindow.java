@@ -2,6 +2,7 @@ package fromLection;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.*;
 
 public class MainWindow extends JFrame implements CanvasRepaintListener{
     private static final int WINDOW_HEIGHT = 600;
@@ -10,7 +11,7 @@ public class MainWindow extends JFrame implements CanvasRepaintListener{
     private static final int POS_Y = 200;
     private final Sprite[] sprites = new Sprite[10];
 
-    private MainWindow(){
+    private MainWindow() throws IOException {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(POS_X, POS_Y, WINDOW_WIDTH, WINDOW_HEIGHT);
         setTitle("Circles");
@@ -29,6 +30,7 @@ public class MainWindow extends JFrame implements CanvasRepaintListener{
         for (int i = 1; i < sprites.length; i++) {
             sprites[i] = new Ball();
         }
+
     }
 
     public void onDrawFrame(MainCanvas canvas, Graphics g, float deltaTime) {
@@ -47,7 +49,7 @@ public class MainWindow extends JFrame implements CanvasRepaintListener{
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         new MainWindow();
     }
 //    @Override
