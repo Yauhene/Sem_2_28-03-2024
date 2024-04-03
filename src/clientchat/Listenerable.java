@@ -1,4 +1,4 @@
-package seminar02.clientchat;
+package clientchat;
 
 @FunctionalInterface
 public interface Listenerable {

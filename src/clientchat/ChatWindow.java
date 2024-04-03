@@ -1,11 +1,17 @@
-package seminar02.clientchat;
+package clientchat;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-
+import clientchat.*;
+/*
+На предыдущем семинаре было описано окно сервера приложения, содержащее две кнопки (старт и стоп) и текстовое поле журнала.
+Необходимо вынести логику работы сервера в класс ChatServer, а в обработчиках кнопок оставить только логику нажатия кнопки и
+журналирования сообщений от сервера.
+Для достижения цели необходимо написать интерфейс "слушатель сервера", с методом "получить сообщение", вызывать его с одной
+стороны и реализовать с другой. Вариант решения
+ */
 public class ChatWindow extends JFrame implements Listenerable {
     private static final int WINDOW_HEIGHT = 300;
     private static final int WINDOW_WIDTH = 507;
@@ -58,6 +64,7 @@ public class ChatWindow extends JFrame implements Listenerable {
         btnSend.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 server.sendMessage(ftMessage.getText());
             }
         });

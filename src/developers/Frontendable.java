@@ -1,4 +1,4 @@
-package seminar02.developers;
+package developers;
 
 public interface Frontendable {
     void doFrontendWork();

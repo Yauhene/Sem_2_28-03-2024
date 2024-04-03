@@ -1,4 +1,4 @@
-package seminar02.developers;
+package developers;
 
 public class Fullstack extends Developer implements Backendable, Frontendable {
     @Override

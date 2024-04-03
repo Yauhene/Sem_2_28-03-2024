@@ -1,7 +1,7 @@
-package seminar02.clientchat;
+package clientchat;
 
 public class ClientChat {
     public static void main(String[] args) {
-        ChatWindow chatWindow = new ChatWindow();
+        clientchat.ChatWindow chatWindow = new clientchat.ChatWindow();
     }
 }

@@ -1,4 +1,4 @@
-package seminar02.clientchat;
+package clientchat;
 
 public interface Clickable {
     void sendMessage(String string);

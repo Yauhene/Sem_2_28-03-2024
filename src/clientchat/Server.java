@@ -1,4 +1,4 @@
-package seminar02.clientchat;
+package clientchat;
 
 import java.io.*;
 
@@ -15,10 +15,12 @@ public class Server implements Clickable {
     boolean isConnect;
     Listenerable action;
     StringBuilder textLog;
-    private static final String fileName = "./src/seminar02/clientchat/log_chat.txt";
+    private static final String fileName = "./src/clientchat/log_chat.txt";
 
 
     public Server(Listenerable action) {
+        // ---- отсебятина -----
+        //System.out.println("------ Отсебятина: " + action);
         this.isConnect = false;
         this.action = action;
     }

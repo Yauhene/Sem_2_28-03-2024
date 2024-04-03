@@ -1,5 +1,10 @@
-package seminar02.developers;
+package developers;
 
+/*
+Описать команду разработчиков. В команде могут находиться бэкэндеры, которые в состоянии писать серверный код,
+фронтэндеры, которые могут программировать экранные формы и фуллстэк-разработчики, совмещающие в себе обе компетенции.
+Реализовать класс фуллстэк-разработчика, создать экземпляр и последовательно вызвать все его методы.
+ */
 public class Main {
     public static void main(String[] args) {
         Backender backender = new Backender("John", 33);
@@ -20,5 +25,9 @@ public class Main {
         fullstackDeveloper.doFrontendWork();
 
         fullstack2.doBackendWork();
+
+        System.out.println("Собственно, по домашнему заданию:");
+        Developer vasia = new Frontender("Vasia", 94);
+        vasia.developGUI();
     }
 }
